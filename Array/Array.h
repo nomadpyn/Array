@@ -16,6 +16,9 @@ public:
 	}
 // конструктор по умолчанию
 	Array():Array(3){}
-
+// деструктор
+	~Array() {
+		delete[] this->arr;
+	}
 };
 
