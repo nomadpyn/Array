@@ -37,3 +37,8 @@
 *.vcxproj
 *.filters
 *.user
+*.vsidx
+*.lock
+*.db-shm
+*.db-wal
+*.opendb
