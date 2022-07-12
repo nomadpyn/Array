@@ -14,6 +14,8 @@ public:
 		for (int i = 0; i < this->size; i++)
 			this->arr[i] = arrP[i];
 	}
-	
+// конструктор по умолчанию
+	Array():Array(3){}
+
 };
 
