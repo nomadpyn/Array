@@ -42,3 +42,11 @@
 *.db-shm
 *.db-wal
 *.opendb
+*.log
+*.recipe
+*.ilk
+*.lastbuildstate
+*.tlog
+*.txt
+*.idb
+*.pdb

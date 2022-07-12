@@ -1,4 +1,8 @@
 ﻿#pragma once
+#include<iostream>
+
+using namespace std;
+
 class Array
 {
 private:
@@ -25,5 +29,7 @@ public:
 	~Array() {
 		delete[] this->arr;
 	}
+// описание методов и дружественных функции класса
+	friend ostream& operator<<(ostream& output, const Array& obj);
 };
 
