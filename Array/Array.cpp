@@ -15,3 +15,8 @@ istream& operator >>(istream& input, Array& obj) {
 		input >> obj.arr[i];
 	return input;
 }
+// фукнция случайного заполнения массива
+void Array::randomize() {
+	for (int i = 0; i < this->size; i++)
+		arr[i] = rand() % 25;
+}

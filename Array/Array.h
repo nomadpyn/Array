@@ -32,5 +32,6 @@ public:
 // описание методов и дружественных функции класса
 	friend ostream& operator<<(ostream& output, const Array& obj);
 	friend istream& operator>>(istream& input, Array& obj);
+	void randomize();
 };
 
