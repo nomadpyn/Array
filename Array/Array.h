@@ -16,6 +16,11 @@ public:
 	}
 // конструктор по умолчанию
 	Array():Array(3){}
+// конструктор копирования
+	Array(const Array& other) : size{ other.size }, arr{ new int[other.size] } {
+		for (int i = 0; i < this->size; i++)
+			this->arr[i] = other.arr[i];
+	}
 // деструктор
 	~Array() {
 		delete[] this->arr;
