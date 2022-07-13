@@ -37,3 +37,13 @@ Array& Array::operator=(const Array& other) {
 	}
 	return *this;
 }
+// перегрузка оператора = для перемещения
+Array& Array::operator=(Array&& other) {
+	if (!(this == &other)) {
+		delete arr;
+		this->arr = other.arr;
+		this->size = other.size;
+		other.arr = nullptr;
+		other.size = 0;
+	}
+}
