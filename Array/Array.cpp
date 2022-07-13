@@ -20,3 +20,20 @@ void Array::randomize() {
 	for (int i = 0; i < this->size; i++)
 		arr[i] = rand() % 25;
 }
+// перегрузка оператора = для копирования
+Array& Array::operator=(const Array& other) {
+	if (!(this == &other)) {
+		if (this->size != other.size) {
+			delete this->arr;
+			this->arr = new int[other.size];
+		}
+		this->size = other.size;
+		int* dest{ this->arr };
+		int* src{ other.arr };
+		int* const end{ this->arr + this->size };
+		while (dest < end) {
+			*dest++ = *src++;
+		}
+	}
+	return *this;
+}

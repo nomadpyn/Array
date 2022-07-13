@@ -38,5 +38,6 @@ public:
 	friend ostream& operator<<(ostream& output, const Array& obj);
 	friend istream& operator>>(istream& input, Array& obj);
 	void randomize();
+	Array& operator=(const Array& other);
 };
 
