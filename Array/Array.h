@@ -25,6 +25,11 @@ public:
 		for (int i = 0; i < this->size; i++)
 			this->arr[i] = other.arr[i];
 	}
+// конструктор перемещения
+	Array(Array&& other) : size{ other.size }, arr{ other.arr } {
+		other.arr = nullptr;
+		other.size = 0;
+	}
 // деструктор
 	~Array() {
 		delete[] this->arr;
